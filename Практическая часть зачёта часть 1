@@ -1,0 +1,25 @@
+using System;
+
+namespace практика_зачёт_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double S = 1000;
+            Console.WriteLine("Ведите процент вклада, от имеющейся суммы");
+            double procent = Convert.ToInt32(Console.ReadLine());
+            procent = procent / 100;
+            double p = 1000 * procent;
+            int K = 1;
+            for (; S < 1400; K++)
+            {
+                S = S + p;
+            }
+            Console.WriteLine("Количество месяцев " + K );
+            Console.WriteLine("Итоговый размер вклада " + S);
+
+
+        }
+    }
+}
